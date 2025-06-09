@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://cdn.suwalls.com/wallpapers/games/super-mario-power-ups-48228-2880x1800.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* <- MUY importante */
+  margin: 0; /* Elimina márgenes que puedan cortar el fondo */
+}
+
+
+/* Banner con flexbox */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e60012;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Navegación con flexbox horizontal */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+nav ul li a {
+  background-color: #ffe000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ffcc00;
+}
+
+/* Estilo de secciones */
+section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #ffffff5b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Lista de juegos favoritos (usa Grid) */
+ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+/* Secciones de juego (usa Flexbox) */
+section[id^="nsmb"] article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+section[id^="nsmb"] img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+/* Footer con centrado */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .banner {
+    padding: 1rem 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ol {
+    grid-template-columns: 1fr;
+  }
+
+  section[id^="nsmb"] article {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.slider-container {
+  width: 320px; /* Tamaño fijo como la imagen de Mario Party DS */
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.slider img {
+  width: 320px; /* MISMO tamaño de la caja */
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+
+
+
+
